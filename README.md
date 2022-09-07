@@ -6,3 +6,9 @@ Factors that are necessary for predicting the sales across the various stores in
   3) School and state holidays
   4) Seasonality
   5) Locality
+# REPO Structure
+1) Notebooks folder -> EDA Notebook file
+2) Data folder -> CSV data files
+3) Tests folder -> Test scripts
+# Installation guide
+# ML model design diagram
