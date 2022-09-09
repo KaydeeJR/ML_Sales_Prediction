@@ -2,5 +2,6 @@
 # the performance. Learn more at
 # https://dvc.org/doc/user-guide/dvcignore
 /mlruns
-/data_extraction.py
-/data_preprocessing.py
+/scripts
+/__pycache__
+/notebooks

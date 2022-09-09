@@ -1,3 +1,6 @@
+"""
+This script merges 2 dataframes that are stored in csv files
+"""
 import pandas as pd
 import os
 import sys
@@ -19,13 +22,13 @@ def save_as_csv(dataframe, filePath:str):
     dataframe.to_csv(filePath)
     return filePath
 
-def merge_two_dataframes(dataframe1, dataframe2)->pd.DataFrame:
+def merge_two_dataframes(leftDF, rightDF)->pd.DataFrame:
     """
-    This function accepts two dataframe as arguments
-    left_index => take the index in the left column i.e dataframe1 as joint dataframe index
-    right_on => take column or index in right dataframe i.e. dataframe2 to join on 
+    This function accepts two dataframe as arguments and performs left outer join
+    how => Missing values in rightDF are replaced with NaNs  
+    on => the shared column in leftDF is used to join both dataframes  
     """
-    return pd.merge(dataframe1,dataframe2,left_index=True, right_on='Store').reset_index()
+    return leftDF.merge(rightDF, on='Store', how='left')
 
 if __name__ == "__main__":
     """
