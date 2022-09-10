@@ -1,0 +1,4 @@
+outs:
+- md5: 51d25702471caee1a0be2ffcd856ee72
+  size: 3579249
+  path: merged_test_sales_store.csv

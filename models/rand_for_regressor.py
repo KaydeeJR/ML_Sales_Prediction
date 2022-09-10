@@ -1,0 +1,17 @@
+from sklearn.ensemble import RandomForestRegressor
+rfr = RandomForestRegressor(n_estimators=10, 
+                            criterion='mse', 
+                            max_depth=5, 
+                            min_samples_split=2, 
+                            min_samples_leaf=1, 
+                            min_weight_fraction_leaf=0.0, 
+                            max_features='auto', 
+                            max_leaf_nodes=None, 
+                            min_impurity_decrease=0.0, 
+                            min_impurity_split=None, 
+                            bootstrap=True, 
+                            oob_score=False,
+                            n_jobs=4,
+                            random_state=31, 
+                            verbose=0, 
+                            warm_start=False)

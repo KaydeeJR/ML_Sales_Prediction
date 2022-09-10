@@ -14,6 +14,7 @@ file_path_to_train_set = "\\train.csv"
 file_path_to_test_set = "\\test.csv"
 file_path_to_store_dataset = "\\store.csv"
 file_path_to_merged_dataset = "\\merged_train_sales_store.csv"
+file_path_to_merged_test_set = "\\merged_test_sales_store.csv"
 
 def read_csv_file(filePath:str)->pd.DataFrame:
     return pd.read_csv(filePath, low_memory=False)
@@ -36,4 +37,4 @@ if __name__ == "__main__":
     2) merge dataframes
     3) save merged dataframes to CSV files
     """
-    save_as_csv(merge_two_dataframes(read_csv_file(os.getcwd()+"\\data"+file_path_to_store_dataset),read_csv_file(os.getcwd()+"\\data"+file_path_to_train_set)),os.getcwd()+"\\data"+file_path_to_merged_dataset)
+    save_as_csv(merge_two_dataframes(read_csv_file(os.getcwd()+"\\data"+file_path_to_store_dataset),read_csv_file(os.getcwd()+"\\data"+file_path_to_test_set)),os.getcwd()+"\\data"+file_path_to_merged_test_set)

@@ -5,3 +5,5 @@
 /scripts
 /__pycache__
 /notebooks
+/models
+/tests
